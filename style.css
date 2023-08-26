@@ -1,0 +1,235 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+}
+header{
+    position: fixed;
+    width: 225vh;
+    top: 0;
+    right: 0;
+    text-align: center;
+    background: rgb(255, 110, 2150,0.3);
+    padding: 15px 8%;
+    z-index: 1000;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.logo{
+    text-align: left;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+}
+  .navbar li{
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    
+}
+.navbar li a{
+    color: #fff;
+}
+.navbar li:hover{
+    background: rgb(255, 110, 2150,0.8);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease .45s;
+}
+.btn{
+    display: inline-block;
+    padding: 8px 32px;
+    color: #fff;
+    border: 2px solid rgb(255, 110, 2150,0.3);
+    background: transparent;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+.btn:hover{
+    background: rgb(255, 110, 2150,0.8);
+    border-radius: 5px;
+    transition: all ease .45s;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    position: relative;
+    width: 420px;
+    height: 420px;
+    border-radius: 24px; 
+    border: 3px solid rgba(257,257,257,.4);
+    background: transparent;
+    backdrop-filter: blur(25px);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 30px 100px 0px;
+    display: flex; 
+    justify-content: center; 
+     align-items: center;
+   overflow: hidden;
+transition: all ease 0.35s;
+}
+/* .main-menu{
+    padding: 50px;
+    width: 100%;
+} */
+.main-box h1{
+    color: #162938;
+    display: flex;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 40px;
+}
+.main-box .input-box{
+    position: relative;
+    height: 40px;
+    width: 100%;
+    border-bottom: 2px solid #162938;
+    margin: 32px 0;
+}
+
+.main-box .input-box label{
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #162938;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all ease 0.45s;
+}
+ .main-box .input-box input{
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    font-size: 17px;
+    font-weight: 600; 
+     color: #162938;
+    padding: 0 30px 0 6px;
+ }
+ 
+.main-box .input-box .icon{
+    position: absolute;
+    right: 9px;
+    font-size: 19px;
+    color: #162938;
+    line-height: 40px;
+} 
+
+.main-box .input-box input:focus~label,
+.main-box .input-box input:valid~label{
+    top: -3px;
+}
+.check{
+    font-size: 15px;
+    font-weight: 500;
+    color: #162938;
+    margin: -14px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.check label input{
+    accent-color: #162938;
+    margin-right: 5px;
+}
+.check a{
+    color: #162938;
+    font-weight: 600;
+}
+.check a:hover{
+    text-decoration: underline;
+}
+
+.btn1{
+    background: #162938;
+    height: 43px;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+.btn1:hover{
+    background: rgb(255, 110, 210,0.3);
+    transition: all ease 0.45s;
+    color: #162938;
+}
+
+.register{
+    font-size: 15px;
+    text-align: center;
+    color: #162938;
+    font-weight: 500;
+    margin: 10px 0 10px;
+}
+.register p a{
+    font-weight: 600;
+    color: #162938;
+}
+.register p a:hover{
+    text-decoration: underline;
+}
+
+.close-icon{
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 44px;
+    height: 44px;
+    background: #162938;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    z-index: 1;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+}
+.container .main-box.login{
+   transition: transform .20s ease;
+   transform: translateX(0);
+}
+.container .main-box.register{
+    position: absolute;
+    transform: translateX(500px);
+    transition: none;
+}
+
+.container.active{
+    height: 500px;
+}
+.container.active .main-box.login{
+    transition: none;
+    transform: translateX(-500px);
+}
+.container.active .main-box.register{
+    transition: transform .20s ease;
+    transform: translateX(0);
+}
+.container{
+    transform: scale(0);
+}
+.container.active-popup{
+    transform: scale(1);
+}
